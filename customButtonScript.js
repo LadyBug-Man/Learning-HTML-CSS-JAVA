@@ -21,21 +21,40 @@ document.querySelectorAll('[data-sound]').forEach(button => {
 });
 
 
+/*
+// Draggable Retro Window (PNG Top Bar as Handle)
 
+function makeDraggableFromTopBar(element, topBarHeight) {
+    let offsetX = 0, offsetY = 0, isDragging = false;
 
-/*           ------ Older messier code ------
----------------------------------------------------------------------
-const btn = document.getElementById('soundBtn');
-const btn2 = document.getElementById('soundBtn2');
-const clickSound = document.getElementById('clickSound');
+    element.addEventListener('mousedown', (e) => {
+        // Only start dragging if mouse is in top bar area
+        if (e.offsetY <= topBarHeight) {
+            isDragging = true;
+            offsetX = e.clientX - element.offsetLeft;
+            offsetY = e.clientY - element.offsetTop;
+        }
+    });
 
-btn.addEventListener('click', () => {
-    clickSound.currentTime = 0; // rewind in case it was just played
-    clickSound.play();
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            element.style.left = (e.clientX - offsetX) + 'px';
+            element.style.top = (e.clientY - offsetY) + 'px';
+        }
+    });
+}
+
+// Run setup after page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const retroWindow = document.getElementById('retroWindow');
+
+    if (retroWindow) {
+        // Adjust topBarHeight to match the pixel height of your PNG's title bar
+        makeDraggableFromTopBar(retroWindow, 40);
+    }
 });
-
-
-btn2.addEventListener('click', () => {
-    clickSound.currentTime = 0; // rewind in case it was just played
-    clickSound.play();
-}); */
+*/ 

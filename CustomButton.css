@@ -4,8 +4,28 @@ body {
     /* Sets the Margin to this number instead of the default setting */
     margin: 0;
 
+    /* Sets the background colour of the html page */
+    background-color: #202020;
+
     /* Sets the font to this specified typed instead of the browsers default */
     font-family: Arial, sans-serif;
+
+}
+
+header {
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent; 
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
 }
 
 /* Creates a container so the text can be included in the same column as its button */
@@ -28,7 +48,7 @@ body {
     font-size: clamp(12px, 1.2vw, 18px); 
 
      /* Text color */
-    color: #000;                
+    color: #ffffff;                
 
     text-align: center;
     font-family: Arial, sans-serif;
@@ -183,5 +203,67 @@ body {
 
 .youtube_Profile:hover {
     background-image: url('images/Youtube_Hover.png');
+}
+
+.retro-window {
+
+    background-image: url("images/Profile_WindowVer2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    
+
+    width: 80vw;              
+    aspect-ratio: 1 / 1;      
+    
+    
+    max-width: 1000px;         
+    max-height: 1000px;        
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    align-items: flex-start; 
+
+
+    justify-content: flex-start;
+
+
+    padding-top: 5%;   
+    padding-left: 4.167%;
+    padding-right: 4.167%;
+    padding-bottom: 9.375%;
+
+
+    box-sizing: border-box;
+
+    overflow: hidden;       
+   
+    
+}
+
+
+.window-content {
+    width: 100%;
+
+
+    color:  black;
+
+
+    font-family: monospace;
+
+
+    text-align: left;
+
+
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
